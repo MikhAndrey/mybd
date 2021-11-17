@@ -1,0 +1,47 @@
+
+.fields{
+    display:inline-block;
+    width:fit-content;
+    margin:20px;
+}
+input:focus{
+    background-color: aquamarine;
+}
+.red{
+    color:red;
+}
+.tables{
+    margin-top:150px;
+}
+.hidden{
+    display:none;
+}
+tr,th,td{
+    border:1px solid black;
+}
+.fields1{
+    display:inline-block;
+    width:40vw; 
+    vertical-align: top;
+}
+.bdmenu{
+    width:fit-content;
+    padding:20px;
+    background-color: aquamarine;
+    position:fixed;
+    margin-bottom:200px;
+}
+.narform{
+    display:none;
+    left:40vw;
+}
+.naritem:hover{
+    cursor:pointer
+}
+td{
+    text-align:center
+}
+.rezTable{
+    margin-top:200px;
+}
+

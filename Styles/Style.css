@@ -1,0 +1,401 @@
+#backheader{
+    color:magenta;
+    opacity:0,5;
+    z-index:2;
+    right:2px;
+    top:2px;
+    position:absolute;
+    font-size:1.4vw;
+}
+#frontheader{
+   left:0%;
+    width:60vw;
+   height:50px;
+   margin-left:0px;
+   color:lightskyblue;
+   z-index:1;
+   text-align:right;
+   position:relative;
+   font-size:1.4vw;
+}
+
+#logo{
+    left:75vw;
+    width:80px;
+    height:70px;
+    top:10px;
+    position:absolute;
+    z-index:1;
+}
+.menu__item{  
+    margin-right:15px;
+}
+.last_menu_item{
+    margin-left:auto;
+}
+#menu{
+    background-color: rgb(216, 161, 58);
+    left:0;
+    width:60%;
+    padding:10px;
+    border-top:1px solid black;
+    border-right:1px solid black;
+    display:flex;
+    align-items: center;
+    flex-direction:column-reverse;
+}
+.nav_sidebar{  
+    background-color: rgb(243, 233, 174);
+    margin-bottom:10px;
+}
+#navigation1{
+    width:100vw;
+}
+
+#side{
+    left:60vw;
+    width:40vw;
+    top:0px;
+    height:250px;
+    z-index:0;
+    position:absolute;
+}
+.maincolor{
+    background-color:rgb(243, 233, 174);
+}
+.contactinfo{
+    height:20px;
+    width:100vw;
+    text-align: center;
+    background-color: rgb(216, 161, 58);
+}
+.center{
+    left:40vw;
+}
+div{
+    position:relative;
+}
+main{
+    margin-top:10px;
+    width:90vw;
+    margin-bottom:160px;
+    text-align: justify;
+    font-size:14pt;
+}
+#info3{
+    top:calc(100vh - 55px);
+    position:fixed;
+    width:100vw;
+    z-index:5;
+}
+#info4{
+    top:calc(100vh - 35px);
+    position:fixed;
+    height:35px;
+    width:100vw;
+    z-index:5;
+}
+#navigation3{
+    top:calc(100vh - 105px);
+    width:100vw;
+    position:fixed;
+    z-index:5;
+}
+
+#cite{
+    border:2px solid blue;
+    margin-left:10px;
+    width:40vw;
+}
+.list{
+    display:table-cell;
+}
+#list3{
+    margin-left:20px;
+}
+.center1{
+    left:35%;
+    top:5vh;
+}
+#warning{
+    text-align: center;
+    font-size: 32px;
+}
+#frame{
+    height:40vh;
+    width:30vw;
+}
+.war{
+    width:30vw;
+}
+a:link{
+    color:red;
+}
+a:hover{
+    color:aquamarine;
+}
+a:visited{
+    color:darkcyan;
+}
+a{
+    font-size: 14pt;
+}
+#fox{
+    border:2px solid chartreuse;
+    padding:2cm;
+    text-align: justify;
+    background-color: aqua;
+    color:brown;
+    font-size: 12pt;
+}
+#wolf{
+    padding:0.5cm;
+    margin-left:1cm;
+    margin-right:1cm;
+    background-color: yellow; 
+}
+.hlop1{
+    width:5cm;
+    height:50px;
+    background-color:brown;
+}
+.hlop2 {
+    height:20px;
+    background-color:cyan;
+    width:5cm;
+    margin-top:10px;
+}
+.hlop3{
+    margin-top:5px;
+    background-color:cyan;
+    width:5cm;
+    height:20px
+}
+.hlop4{
+    width:5cm;
+    padding-top:5px;
+    height:50px;
+    background-color:brown;
+}
+.hlop5{
+    margin-top:5px;
+    background-color:cyan;
+    width:5cm;
+    height:20px
+}
+.hlop6{
+    width:5cm;
+    border-top:5px solid black;
+    height:50px;
+    background-color:brown;
+}
+#float{
+    float:left;
+    border:1px solid black;
+    background-color: darkorange;
+    width:50vw;
+    height:fit-content;
+    margin:10px;
+}
+#vertical{
+    border-left:5px solid black;
+    border-right:5px solid darkslateblue;
+    padding:3px;
+    margin:10px;
+}
+#front{
+    margin:20px;
+    color:brown;
+    position:relative;
+}
+#back{
+    color:rgb(170,170,170);
+    position:absolute;
+    z-index:-2;
+    top:30px;
+    left:40vw;
+    font-size:40pt;
+}
+.line{
+    width:30vw;
+    margin:10px;
+    display:inline-block;
+    vertical-align: top;
+}
+
+.letter:first-letter{
+    font-size:30pt;
+    color:red;
+    float:left;
+    margin-right:2px;
+}
+.scroll{
+    height:200px;
+    width:30vw;
+    overflow:auto;
+    display:inline-block;
+    margin:20px;
+}
+.string{
+    display:inline;
+}
+.block{
+    display:block;
+}
+.default{
+    background-color: burlywood;
+    margin:5px;
+}
+.result{
+    background-color: cornflowerblue;
+    margin:5px;
+}
+#prefrontname{
+    left:40vw;
+    color:blue;
+    position:relative;
+    z-index:-1;
+    font-size:18pt;
+    margin-top:10px;
+}
+#frontname{
+    color:dodgerblue;
+    position:absolute;
+    left:3px;
+    bottom:3px;
+    z-index:-2;
+}
+#backname{
+    color:aqua;
+    position:absolute;
+    left:6px;
+    bottom:6px;
+    z-index:-3;
+}
+body{
+    overflow-x:hidden;
+}
+@media screen and (min-width:1300px){
+    #rasskaz{
+        border-radius:40px;
+        background-color:hsl(140,80%,80%);
+    }
+}
+@media screen and (min-width: 980px){
+    #menu{
+        flex-direction: row;
+    }
+    #side{
+        height:125px;
+    }
+}
+@media screen and (min-height: 200px) {
+    #back{
+        display: none;
+    }  
+}
+@media screen and (min-height: 500px) {
+    #back{
+        display: block;
+    }    
+   
+}
+@media screen and (min-width: 700px) and (max-width:1300px) {
+    #float{
+       background-color: darkkhaki;
+    }
+    #rasskaz {
+        border-radius:20px 40px;
+        background-color:hsla(140,80%,80%,0.5);
+    }
+}
+@media screen and (max-width:700px){
+    #rasskaz {
+        border-radius:20px;
+        background-color:hsla(140,80%,80%,0.2);
+        
+    }
+    #fox{
+        padding:0;
+    }
+    main{
+        font-size:12pt;
+    }
+    .line{
+        display:block;
+        width:90vw;
+    }
+    .letter::first-letter{
+        font-size:12pt;
+        color:black;
+    }
+}
+@media (pointer:fine){
+a:hover{
+    color:aqua;
+    text-decoration: none;
+}
+#fox:hover{
+    background-color:blanchedalmond;
+}
+#menu:hover{
+    border-top:3px solid aqua;
+    border-right:3px solid aqua;
+}
+#front:hover{
+    display:none;
+}
+#vertical:hover{
+    font-weight:bolder;
+}
+}
+#rasskaz{
+  width:40vw; 
+  left:30vw;
+  height:100px;
+  overflow: hidden;
+  border:3px solid black;
+  padding:20px;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+}
+a[class="link-text"]{
+    font-size:16pt;
+}
+a[class^="link"]:hover{
+    color:crimson;
+}
+a[class*="active"]:active{
+    text-decoration:line-through;
+}
+a[class$="link"]:link{
+    background-color: coral;
+}
+.pseudo:first-child:hover{
+    background-color:darkorange;
+}
+.pseudo:last-child:hover{
+    background-color:green;
+}
+.pseudo:nth-child(2n):hover{
+    font-style:italic;
+}
+.pseudo:nth-child(2n+1):hover{
+    font-weight:bold;
+}
+.pseudo:nth-child(5n+1):hover{
+    text-decoration:line-through;
+}
+.pseudo:nth-child(5n+2):hover{
+    text-decoration:line-through;
+}
+.pseudo:nth-child(8):hover{
+    width:30px;
+    background-color:red;
+}
+.pseudo:not(.pseudo:nth-child(8)){
+    color:rgb(155, 18, 0);
+}
+*{
+    margin:0;
+}

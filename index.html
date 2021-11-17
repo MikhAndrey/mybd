@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/formstyle.css">
+    <script src="bd.js"></script>
+</head>
+<body>
+    <header>
+        <div id="frontheader" class="maincolor">Михалев Андрей Геннадьевич
+            <div id="backheader">Михалев Андрей Геннадьевич</div>
+        </div>
+        <aside>
+            <img src="picture.png" id="logo" usemap="#map">
+        </aside>
+        <div id="side" class="maincolor"></div>
+        <div id="menu">
+            <div class="menu__item"><a href="index.html">Форматирование</a></div> 
+            <div class="menu__item"><a href="css.html">CSS</a></div>
+             <div class="menu__item"><a href="DOM.html">DOM</a></div>
+             <div class="menu__item"><a href="cross.html">Кроссворд</a></div>
+             <div class="menu__item"><a href="dinstyle.html">String</a></div>
+             <div class="menu__item"> <a href="blank.html">Формы</a></div>
+             <div class="menu__item"> <a href="blank.html">Data</a></div>
+             <div class="menu__item"> <a href="blank.html">Object</a></div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav_sidebar">
+            <table id="navigation1" class="maincolor" border="1">
+                <tr>
+                <th><a href="pre.html">Предварительно отформатированный текст</a></th>
+                <th><a href="quotes.html">Цитаты</a></th>
+                <th><a href="lists.html">Списки</a></th>
+                <th><a href="tables.html">Таблицы</a></th>
+                <th><a href="escape.html">Escape-последовательности</a></th>
+                <th><a href="zakl.html">Закладки</a></th>
+                <th><a href="vidget.html">Виджет</a></th>
+                <th><a href="index.html#map">Карта ссылок</a></th>
+                <th><a href="index.html#frame">Плавающий фрейм</a></th>
+                </tr>
+            </table>
+            </div>
+            <div class="nav_sidebar">
+                <table id="navigation3" class="maincolor" border="1" height="50px">
+                    <tr>
+                    <th><a href="pre.html">Предварительно отформатированный текст</a></th>
+                    <th><a href="quotes.html">Цитаты</a></th>
+                    <th><a href="lists.html">Списки</a></th>
+                    <th><a href="tables.html">Таблицы</a></th>
+                    <th><a href="escape.html">Escape-последовательности</a></th>
+                    <th><a href="zakl.html">Закладки</a></th>
+                    <th><a href="vidget.html">Виджет</a></th>
+                    <th><a href="index.html#map">Карта ссылок</a></th>
+                    <th><a href="index.html#frame">Плавающий фрейм</a></th>
+                    </tr>
+                </table>
+            </div>
+    </nav>
+    <main>
+        <div class="bdmenu fields">
+            <div class="naritem">Добавление</div>
+            <div class="naritem">Просмотр</div>
+            <div class="naritem">Обработка</div>
+            <div class="naritem">Сортировка по табельному номеру</div>
+            <div class="naritem">Поиск по номеру цеха</div>
+        </div>
+        <div class="fields narform">
+            <form>
+                <fieldset>
+                    <legend>Информация о нарядах</legend>
+                    <div class="fields">
+                        <label for="shifr">Шифр наряда</label><br>
+                        <label for="data">Дата</label><br>
+                        <label for="cekh">Номер цеха</label><br>
+                        <label for="nomer">Табельный номер</label><br>
+                        <label for="izgot">Кол-во изготовленных деталей</label><br>
+                        <label for="prin">Кол-во принятых деталей</label>
+                    </div>
+                    <div class="fields">
+                        <input type="text" autofocus id="shifr"><br>
+                        <input type="date" id="data"><br>
+                        <input type="number" id="cekh" min="1" max="20"><br>
+                        <input type="text" id="nomer"><br>
+                        <input type="number" id="izgot" min="0" max="100"><br>
+                        <input type="number" id="prin" min="0" max="100">
+                    </div>
+                    <input type="submit" id="add" value="Отправить">
+                    <input type="reset" value="Очистить">
+                </fieldset>
+            </form>
+        </div>
+        <button class="but">Отправить</button>
+        <br>
+        <div class="rezTable">
+
+        </div>
+        
+        <p><map name="map"> <area shape="poly" 
+            coords="1,34 16,0 60,0 1,34" 
+            href="lists.html">
+            <area shape="poly" 
+            coords="1,34 60,0 76,34 1,34" href="pre.html">
+            <area shape="poly" 
+            coords="1,34 16,69 76,34 1,34" 
+            href="tables.html">
+            <area shape="poly" 
+            coords="16,69 76,34 60,69 16,69" 
+            href="escape.html">
+          </map></p>
+        
+     </main>
+    <footer>
+        <div class="contactinfo" id="info3">Автор: Михалев Андрей Геннадьевич</div>
+        <div class="contactinfo" id="info4"><a href="mailto:mikhalevange@gmail.com?subject=Вопрос о сайте index.html">Задать вопрос автору</a></div>
+    </footer>
+    <script>
+        let myTable
+        let arrLength
+        let rezTable=document.querySelector(".rezTable")
+        myBd=new Array()
+       let menuItems=document.querySelectorAll(".naritem")
+       console.log(localStorage.length)
+       if (localStorage.length>0){
+            window.addEventListener('open',()=>{
+           arrLength=localStorage.length
+           for (let i=0;i<arrLength;i++){
+               myBd[i]=JSON.parse(localStorage.key(i))
+           }
+            })
+        } else {
+            arrLength=-1;
+        }
+       function naryad (shifr,data,cekh,tabNomer,izgot,prin){
+           this.shifr=shifr
+           this.data=data
+           this.cekh=cekh
+           this.tabNomer=tabNomer
+           this.izgot=izgot
+           this.prin=prin
+       }
+        menuItems[0].addEventListener('click',()=>{
+        document.querySelector(".narform").style.display="inline-block"
+        if (myTable!=undefined){
+            myTable.remove()
+        }
+        })
+        document.getElementById("add").addEventListener('click',(event)=>{
+            let myShifr=document.getElementById("shifr").value
+       let myData=document.getElementById("data").value
+       let myCekh=document.getElementById("cekh").value
+       let myNomer=document.getElementById("nomer").value
+       let myIzgot=document.getElementById("izgot").value
+       let myPrin=document.getElementById("prin").value
+       event.preventDefault()
+            arrLength++
+            myBd[arrLength]=new naryad(myShifr,myData,myCekh,myNomer,myIzgot,myPrin)
+            alert("Новая запись добавлена")
+            })
+        menuItems[1].addEventListener('click',()=>{
+            if (myTable!=undefined){
+            myTable.remove()
+            }   
+            document.querySelector(".narform").style.display="none"
+            myTable=document.createElement("table")
+            myTable.style.border="1px solid black"
+            myTable.style.margin="150px"
+            myTable.style.left="35vw"
+            myTable.innerHTML='<tr> <th>Шифр наряда</th> <th>Дата</th> <th>Номер цеха</th> <th>Табельный номер</th> <th>Кол-во изготовленных деталей</th> <th>Кол-во принятых деталей</th> </tr>';
+            rezTable.append(myTable)
+           for (i=0;i<myBd.length;i++){
+            myTable.insertAdjacentHTML('beforeend',"<TR><TD>" + myBd[i].shifr+ "</TD><TD>" + myBd[i].data + "</TD><TD>"+ myBd[i].cekh + "</TD><TD>" + myBd[i].tabNomer + "</TD><TD>" + myBd[i].izgot + "</TD><TD>" + myBd[i].prin+ "</TD></TR>") 
+           }
+        })
+         menuItems[2].addEventListener('click',()=>{
+            if (myTable!=undefined){
+            myTable.remove()
+            }
+            document.querySelector(".narform").style.display="none"
+            myTable=document.createElement("table")
+            myTable.style.border="1px solid black"
+            myTable.style.margin="150px"
+           myTable.style.left="35vw"
+            myTable.innerHTML='<tr> <th>Шифр наряда</th> <th>Дата</th> <th>Номер цеха</th> <th>Табельный номер</th> <th>Кол-во бракованных деталей</th> </tr>';
+            rezTable.append(myTable)
+           for (i=0;i<myBd.length;i++){
+            myTable.insertAdjacentHTML('beforeend',"<TR><TD>" + myBd[i].shifr+ "</TD><TD>" + myBd[i].data + "</TD><TD>"+ myBd[i].cekh + "</TD><TD>" + myBd[i].tabNomer + "</TD><TD>" + (myBd[i].izgot-myBd[i].prin).toString()+ "</TD></TR>") 
+           }
+        })
+        menuItems[3].addEventListener('click',()=>{
+            if (myTable!=undefined){
+            myTable.remove()
+            }
+            document.querySelector(".narform").style.display="none" 
+            let r
+            myBd1=new Array()
+            for (let i=0;i<myBd.length;i++){
+                myBd1[i]=myBd[i]
+            }
+            for (let i=1;i<myBd1.length;i++){
+                for (let j=0;j<myBd1.length-1;j++){
+                    if (Number(myBd1[j].tabNomer)>Number(myBd1[j+1].tabNomer)){
+                        r=myBd1[j]
+                        myBd1[j]=myBd1[j+1]
+                        myBd1[j+1]=r
+                    }
+                }
+            }
+            myTable=document.createElement("table")
+            myTable.style.border="1px solid black"
+            myTable.style.margin="150px"
+           myTable.style.left="35vw"
+            myTable.innerHTML='<tr> <th>Шифр наряда</th> <th>Дата</th> <th>Номер цеха</th> <th>Табельный номер</th> <th>Кол-во изготовленных деталей</th> <th>Кол-во принятых деталей</th> </tr>'
+            rezTable.append(myTable)
+           for (i=0;i<myBd1.length;i++){
+            myTable.insertAdjacentHTML('beforeend',"<TR><TD>" + myBd1[i].shifr+ "</TD><TD>" + myBd1[i].data + "</TD><TD>"+ myBd1[i].cekh + "</TD><TD>" + myBd1[i].tabNomer + "</TD><TD>" + myBd1[i].izgot + "</TD><TD>" + myBd1[i].prin+ "</TD></TR>") 
+           }
+        })
+        menuItems[4].addEventListener('click',()=>{
+            if (myTable!=undefined){
+            myTable.remove()
+            }
+            document.querySelector(".narform").style.display="none" 
+           let cekhNumber=prompt("Введите номер цеха")
+           if (Number(cekhNumber)!=NaN){
+                myTable=document.createElement("table")
+                myTable.style.border="1px solid black"
+                myTable.style.margin="150px"
+                myTable.style.left="35vw"
+                myTable.innerHTML='<tr> <th>Шифр наряда</th> <th>Дата</th> <th>Номер цеха</th> <th>Табельный номер</th> <th>Кол-во изготовленных деталей</th> <th>Кол-во принятых деталей</th> </tr>'
+                rezTable.append(myTable)
+                for (i=0;i<myBd1.length;i++){
+                    if (myBd[i].cekh==cekhNumber){
+                        myTable.insertAdjacentHTML('beforeend',"<TR><TD>" + myBd[i].shifr+ "</TD><TD>" + myBd[i].data + "</TD><TD>"+ myBd[i].cekh + "</TD><TD>" + myBd[i].tabNomer + "</TD><TD>" + myBd[i].izgot + "</TD><TD>" + myBd[i].prin+ "</TD></TR>") 
+                    }
+                }
+            }
+        })
+        document.querySelector(".but").addEventListener('close',()=>{
+            for (i=0;i<myBd.length;i++){
+                localStorage.setItem('zapis'+i.toString(),JSON.stringify(myBd[i]))
+            }
+            console.log(localStorage.length)
+        })
+        
+    </script>
+</body>
+</html>
